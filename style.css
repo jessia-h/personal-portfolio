@@ -1,0 +1,427 @@
+/* =============================================
+   JESSIA HUANG · PORTFOLIO
+   Pink Minimalist · 2025
+   ============================================= */
+
+/* --- VARIABLES --- */
+:root {
+  --pink-light: #fdf0f0;
+  --pink-soft: #f5c6c6;
+  --pink-mid: #e8a0a0;
+  --pink-deep: #c97070;
+  --pink-accent: #d45f5f;
+  --ink: #1a1010;
+  --ink-muted: #6b4f4f;
+  --white: #ffffff;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --max-width: 1100px;
+  --section-pad: 110px 48px;
+}
+
+/* --- RESET --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--pink-light);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* --- TYPOGRAPHY --- */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+em {
+  font-style: italic;
+  color: var(--pink-accent);
+}
+
+p { color: var(--ink-muted); font-size: 0.97rem; }
+
+a { text-decoration: none; color: inherit; }
+
+/* --- NAV --- */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 48px;
+  background: rgba(253, 240, 240, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--pink-soft);
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--pink-accent);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+}
+
+.nav-links a {
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--pink-accent); }
+
+/* --- HERO --- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 140px 48px 80px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--pink-accent);
+  border: 1px solid var(--pink-mid);
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 36px;
+  width: fit-content;
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero-name {
+  font-size: clamp(72px, 11vw, 148px);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 32px;
+  animation: fadeUp 0.8s 0.15s ease both;
+}
+
+.hero-sub {
+  max-width: 520px;
+  font-size: 1.05rem;
+  color: var(--ink-muted);
+  margin-bottom: 48px;
+  animation: fadeUp 0.8s 0.3s ease both;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--pink-accent);
+  color: var(--white);
+  padding: 14px 36px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-weight: 400;
+  transition: background 0.2s, transform 0.2s;
+  width: fit-content;
+  animation: fadeUp 0.8s 0.45s ease both;
+}
+
+.btn:hover {
+  background: var(--pink-deep);
+  transform: translateY(-2px);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  right: 48px;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--pink-mid);
+  animation: fadeUp 0.8s 0.7s ease both;
+}
+
+/* --- SECTION BASE --- */
+.section {
+  padding: var(--section-pad);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pink-mid);
+  margin-bottom: 48px;
+}
+
+/* --- ABOUT --- */
+.about {
+  border-top: 1px solid var(--pink-soft);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.about-left h2 {
+  font-size: clamp(44px, 6vw, 72px);
+  position: sticky;
+  top: 120px;
+}
+
+.about-right p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.about-facts {
+  display: flex;
+  gap: 40px;
+  margin-top: 48px;
+  padding-top: 36px;
+  border-top: 1px solid var(--pink-soft);
+}
+
+.fact {
+  display: flex;
+  flex-direction: column;
+}
+
+.fact-num {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  color: var(--pink-accent);
+  line-height: 1;
+}
+
+.fact-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 6px;
+}
+
+/* --- SKILLS --- */
+.skills {
+  background: var(--white);
+  max-width: 100%;
+  padding: var(--section-pad);
+}
+
+.skills > * {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills h2 {
+  font-size: clamp(44px, 6vw, 72px);
+  margin-bottom: 64px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: var(--pink-light);
+  padding: 40px 32px;
+  transition: background 0.25s;
+}
+
+.skill-card:hover { background: var(--pink-soft); }
+
+.skill-icon {
+  font-size: 1.6rem;
+  color: var(--pink-accent);
+  margin-bottom: 20px;
+}
+
+.skill-card h3 {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  color: var(--ink);
+}
+
+.skill-card p { font-size: 0.9rem; }
+
+/* --- EXPERIENCE --- */
+.experience { border-top: 1px solid var(--pink-soft); }
+
+.experience h2 {
+  font-size: clamp(44px, 6vw, 72px);
+  margin-bottom: 64px;
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.exp-item {
+  padding: 36px 0;
+  border-bottom: 1px solid var(--pink-soft);
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  align-items: start;
+  transition: background 0.2s;
+}
+
+.exp-item:hover { background: rgba(245, 198, 198, 0.12); }
+
+.exp-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 2px;
+}
+
+.exp-company {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pink-accent);
+  font-weight: 500;
+}
+
+.exp-date {
+  font-size: 0.78rem;
+  color: var(--pink-mid);
+}
+
+.exp-role {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.exp-desc { font-size: 0.93rem; }
+
+/* --- CONTACT --- */
+.contact {
+  background: var(--ink);
+  max-width: 100%;
+  padding: var(--section-pad);
+  color: var(--pink-light);
+}
+
+.contact > * {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact .section-label { color: var(--pink-mid); }
+
+.contact h2 {
+  font-size: clamp(52px, 8vw, 96px);
+  color: var(--white);
+  margin-bottom: 28px;
+}
+
+.contact h2 em { color: var(--pink-soft); }
+
+.contact-sub {
+  max-width: 480px;
+  color: var(--pink-soft);
+  margin-bottom: 52px;
+  font-size: 1rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-link {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  color: var(--white);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding-bottom: 16px;
+  transition: color 0.2s;
+  display: inline-block;
+}
+
+.contact-link:hover { color: var(--pink-soft); }
+
+/* --- FOOTER --- */
+footer {
+  background: var(--ink);
+  padding: 24px 48px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--pink-mid);
+  text-transform: uppercase;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  :root { --section-pad: 80px 28px; }
+
+  nav { padding: 18px 28px; }
+  .nav-links { gap: 20px; }
+
+  .hero { padding: 120px 28px 60px; }
+  .hero-scroll { right: 28px; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-left h2 { position: static; }
+
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+
+  .exp-item { grid-template-columns: 1fr; gap: 10px; }
+}
+
+@media (max-width: 560px) {
+  .nav-links { display: none; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .about-facts { flex-wrap: wrap; gap: 24px; }
+  footer { flex-direction: column; gap: 8px; text-align: center; }
+}
